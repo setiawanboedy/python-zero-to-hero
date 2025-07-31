@@ -59,3 +59,5 @@ for data in list_data:
         jumlah_ganap += 1
 print("Jumlah bilangan genap: ", jumlah_ganap)
 
+# Tugas
+# Melengkapi catatan metode list beserta contohnya

@@ -5,7 +5,9 @@
 import sys
 import os
 
-from basic.module_package_example import mymodule
+from module_package_example import mymodule
+from module_package_example.mypackage import calculator, utils
+
 # import module_package_example/mymodule
 
 # Menambahkan path ke folder module_package_example
@@ -27,7 +29,6 @@ except ImportError as e:
 # Demo mypackage
 print("\n2. Demo mypackage:")
 try:
-    from mypackage import calculator, utils
     
     print("  Calculator:")
     print(f"    - 10 + 5 = {calculator.tambah(10, 5)}")

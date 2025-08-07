@@ -6,6 +6,9 @@ import os
 import sys
 from random import choice, shuffle
 
+from module_package_example import mymodule
+from module_package_example.mypackage import calculator, utils
+
 print("=== Latihan Module Built-in ===")
 print("Direktori saat ini:", os.getcwd())
 print("Platform:", sys.platform)
@@ -22,7 +25,6 @@ try:
     # Tambahkan path ke sys.path agar bisa import dari folder lain
     sys.path.append('module_package_example')
     
-    import mymodule
     print(mymodule.salam("Budi"))
     print(f"10 x 7 = {mymodule.kali(10, 7)}")
     print(f"20 / 4 = {mymodule.bagi(20, 4)}")
@@ -34,7 +36,6 @@ except ImportError as e:
 # Import dari package
 print("\n=== Latihan Package ===")
 try:
-    from mypackage import calculator, utils
     
     # Test calculator
     print(f"15 + 8 = {calculator.tambah(15, 8)}")
@@ -68,30 +69,3 @@ KONSTANTA = "Ini dari module temp"
         f.write(code)
     print("Module temporary berhasil dibuat!")
 
-# Buat dan gunakan module temporary
-buat_module_temp()
-import temp_module
-print(f"Luas persegi sisi 5: {temp_module.hitung_luas_persegi(5)}")
-print(f"Keliling persegi sisi 5: {temp_module.hitung_keliling_persegi(5)}")
-print(temp_module.KONSTANTA)
-
-# Hapus file temporary
-os.remove('temp_module.py')
-print("Module temporary dihapus!")
-
-# Latihan dengan __name__
-print(f"\n=== Info Module ===")
-print(f"Nama module ini: {__name__}")
-print(f"File module ini: {__file__}")
-
-# Latihan exception handling pada import
-print("\n=== Exception Handling Import ===")
-try:
-    import module_tidak_ada
-except ImportError:
-    print("Module tidak ditemukan - error ditangani!")
-
-try:
-    from mypackage import module_tidak_ada
-except ImportError:
-    print("Module dalam package tidak ditemukan - error ditangani!")

@@ -23,3 +23,5 @@
 2. git branch (cek posisi branch)
 3. git switch <"nama branch">
 4. git merge <"nama branch">
+
+# head

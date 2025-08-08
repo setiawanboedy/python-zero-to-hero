@@ -19,9 +19,7 @@
 4. git push -u origin master
 
 # Cara buat branch
-1. git branch <"nama branch">
-2. git branch (cek posisi branch)
-3. git switch <"nama branch">
-4. git merge <"nama branch">
-
-# head
+1. git branch namabranch -> untuk membuat branch
+2. git branch -> cek branch
+3. git switch namabranch -> untuk pindah ke branch lain
+4. git merge namabranch -> untuk menggabungkan perubahan darin namabranch ke branch saat ini

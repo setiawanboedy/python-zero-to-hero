@@ -18,7 +18,7 @@
 3. git remote add origin <"url remote">
 4. git push -u origin master
 
-# Cara buat branch
+# Cara buat branch    
 1. git branch namabranch -> untuk membuat branch
 2. git branch -> cek branch
 3. git switch namabranch -> untuk pindah ke branch lain
